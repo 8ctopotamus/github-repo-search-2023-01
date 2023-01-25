@@ -4,7 +4,7 @@ import SearchPage from './pages/search'
 import SavedPage from './pages/saved'
 
 function App() {
-  const [view, setView] = useState('saved')
+  const [view, setView] = useState('search')
 
   const renderView = () => {
     if (view === 'saved')

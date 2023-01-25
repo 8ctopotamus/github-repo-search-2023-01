@@ -8,7 +8,7 @@ const SearchForm = ({ term, setTerm, onSubmit }) => {
     e.preventDefault()
     onSubmit()
   }
-console.log(term)
+  
   return (
     <form onSubmit={handleSubmit} className="my-4">
       <Row>
