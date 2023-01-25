@@ -2,6 +2,8 @@ import { useState } from 'react'
 import Container from '../components/container'
 import SearchForm from '../components/searchForm'
 import Spinner from '../components/spinner'
+import List from '../components/list'
+import ListItem from '../components/listItem'
 import API from '../utils/api'
 
 const SearchPage = () => {
@@ -33,7 +35,10 @@ const SearchPage = () => {
       />
       {loading 
         ? <Spinner />
-        : <pre>{JSON.stringify(repos, null, 2)}</pre>}
+        : <List>
+            {repos.map(repo => <ListItem {...repo} key={repo.id} />)}
+          </List>
+      }
     </Container>
   )
 }
