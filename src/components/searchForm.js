@@ -8,7 +8,7 @@ const SearchForm = ({ term, setTerm, onSubmit }) => {
     e.preventDefault()
     onSubmit()
   }
-
+console.log(term)
   return (
     <form onSubmit={handleSubmit} className="my-4">
       <Row>
@@ -21,7 +21,7 @@ const SearchForm = ({ term, setTerm, onSubmit }) => {
             placeholder="Search repos by keyword"
             type="search" 
           />
-          <Button className="btn-success">Search</Button>
+          <Button className="btn-success" disabled={!term}>Search</Button>
         </div>      
       </Row>
     </form>

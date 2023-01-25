@@ -53,7 +53,7 @@ const SearchPage = () => {
   
   return (
     <Container>
-      <h1 className='mt-3'>Search Github Repos: {term}</h1>
+      <h1 className='mt-3'>Search Github Repos: <span className='badge bg-secondary'>{term}</span></h1>
       <SearchForm 
         term={term} 
         setTerm={setTerm}
